@@ -7,7 +7,6 @@ on:
 
 jobs:
   build:
-    name: Build Stage
     runs-on: ubuntu-latest
 
     steps:
