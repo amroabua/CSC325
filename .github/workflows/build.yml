@@ -29,9 +29,3 @@ jobs:
       - name: Build Web Application
         working-directory: ./app
         run: flutter build web
-
-      - name: Archive Build Artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: web-build
-          path: build/web
