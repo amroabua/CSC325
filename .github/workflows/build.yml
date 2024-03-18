@@ -26,6 +26,7 @@ jobs:
         run: flutter test app/test
 
       - name: Build Web Application
+        working-directory: ./app
         run: flutter build web
 
       - name: Archive Build Artifacts
