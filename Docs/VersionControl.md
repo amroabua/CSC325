@@ -30,7 +30,7 @@ Git facilitates collaboration through features such as:
 - Conflict Resolution: Resolve conflicts that arise when merging branches with overlapping changes.
 
 ## Challenges and Solutions
-Throughout the project, we encountered challenges such as merge conflicts and diverging feature branches. These were addressed through proactive communication, regular code reviews, and the use of Git's conflict resolution tools.
+Throughout the project, I have encountered challenges such as merge conflicts and diverging feature branches. One particular conflict i had was choosing a proper Version Control, Git was chosen by its use of conflict resolution tools by Mr. Munday.
 
 ## Conclusion
 The adoption of Git as our version control system has greatly enhanced our development workflow. It has provided us with a robust framework for managing code changes, collaborating effectively, and ensuring the integrity of our project. Moving forward, we will continue to leverage Git's capabilities to streamline our development process and deliver high-quality software.
