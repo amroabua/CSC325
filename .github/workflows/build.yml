@@ -22,6 +22,7 @@ jobs:
           flutter pub get || echo "Flutter application dependencies not installed. Run 'flutter pub get' to install them."
 
       - name: Run Tests
+        working-directory: ./app
         run: flutter test app/test
 
       - name: Build Web Application
