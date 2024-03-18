@@ -13,15 +13,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14' # You can use version 16 or higher depending on your preference
-
-      - name: Set up Flutter
+      - name: Flutter action
         uses: subosito/flutter-action@v2.13.0
-        with:
-          flutter-version: 'stable'
 
       - name: Verify Dependencies
         run: |
