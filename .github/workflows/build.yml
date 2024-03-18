@@ -16,14 +16,15 @@ jobs:
       - name: Flutter action
         uses: subosito/flutter-action@v2.13.0
 
-      - name: Verify Dependencies
+      - name: App Dependencies
+      - working-directory: ./app
         run: |
           flutter doctor
-          flutter pub get || echo "Flutter application dependencies not installed. Run 'flutter pub get' to install them."
+          flutter pub get 
 
       - name: Run Tests
         working-directory: ./app
-        run: flutter test app/test
+        run: flutter test
 
       - name: Build Web Application
         working-directory: ./app
