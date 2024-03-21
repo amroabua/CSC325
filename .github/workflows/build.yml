@@ -1,28 +1,34 @@
-name: CI/CD Pipeline
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - main  # Change this to your main branch name
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: subosito/flutter-action@v2.13.0  
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
         with:
-         channel: 'stable'
-      
-      - name: Verify Dependencies
-        working-directory: ./app
+          flutter-version: '2.x'  # Change to the desired Flutter version
+
+      - name: Install dependencies
         run: flutter pub get
 
-      - name: Run Tests
-        working-directory: ./app
-        run: flutter test
-
-      - name: Build Web Application
-        working-directory: ./app
+      - name: Build web app
         run: flutter build web
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GH_PAT }}  # Use the Personal Access Token secret
+          publish_dir: ./build/web
+          publish_branch: gh-pages
+          cname: ${{ secrets.CUSTOM_DOMAIN }}  # Optional, use if you have a custom domain
+          commit_message: Deploy Flutter web app to GitHub Pages
