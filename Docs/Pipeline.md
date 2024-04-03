@@ -14,25 +14,41 @@ GitHub Actions complements Git by enabling workflow automation directly within o
 
 In summary, the combination of Git and GitHub Actions provides a comprehensive solution for version control and CI/CD automation. Despite their respective limitations, their strengths in flexibility, scalability, and community support make them well-suited for streamlining our development processes and ensuring the quality and reliability of our Flutter web application.
 
+## Build Phase
+
+### Workflow Overview
+
+The build phase of our CI/CD pipeline automates the process of compiling the Flutter web application code, verifying dependencies, and executing tests to ensure code integrity and functionality.
+
+### Workflow Setup
+
+#### GitHub Actions Workflow File:
+
+We've set up a GitHub Actions workflow named `build.yml` in the `.github/workflows` directory of our repository.
+
 #### Workflow Steps:
 
-1. **Clone Repository**: The workflow starts by cloning the repository containing the source code of our Flutter web application.
+1. **Clone Repository**: The workflow begins by cloning the repository containing the Flutter web application source code.
 
 2. **Dependency Verification**:
-   - We check if the runner environment has the necessary Flutter dependencies installed.
-   - Additionally, we ensure that the required Flutter application dependencies are present. If not, we provide instructions on how to install them.
+   - The pipeline checks if the runner environment has the necessary Flutter dependencies installed.
+   - Additionally, it verifies the presence of required Flutter application dependencies. Instructions for installation are provided if dependencies are missing.
 
-3. **Test Execution**:
-   - The workflow runs any available Flutter tests present in the repository.
-   - It reports the test results, providing developers with immediate feedback.
+3. **Unit Testing**:
+   - Following dependency verification, the workflow executes unit tests to validate the functionality of individual components within the application.
+   - Test results are reported back to developers for immediate feedback.
 
-4. **Build Flutter Application**:
-   - Using appropriate commands, the workflow builds the Flutter web application.
-   - It ensures that the build process completes successfully without errors.
+4. **Integration Testing** (Optional):
+   - Integration testing, if applicable, is performed to validate the interaction between various components and services.
+   - This step ensures the seamless integration of different parts of the application and identifies any potential integration issues.
 
-#### Environment Variables:
+5. **Code Compilation**:
+   - Using the Flutter SDK, the pipeline compiles the source code of the Flutter web application into executable artifacts.
+   - Compilation ensures that the application is built successfully and ready for deployment.
 
-We've set up necessary environment variables such as the Flutter SDK path in our workflow to facilitate the build process.
+### Environment Variables:
+
+We've configured necessary environment variables, such as the Flutter SDK path, in the workflow to facilitate the build process.
 
 ## Deployment Stage
 
