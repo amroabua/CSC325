@@ -1,29 +1,111 @@
 # CI/CD Pipeline
 
-## CI/CD Pipeline Environment
+## Build Stage
 
-Our CI/CD pipeline operates in a cloud-based environment leveraging Amazon Web Services (AWS). The infrastructure is designed to be scalable and resilient, ensuring efficient execution of automated testing, integration, and deployment processes. We utilize Docker containers for consistent and reproducible builds across different environments. The pipeline is configured to work with Linux-based operating systems to align with our development stack.
+### Workflow Overview
 
-## CI/CD Pipeline Tools
+The build stage of our CI/CD pipeline focuses on automating the process of building our Flutter web application, verifying dependencies, running tests, and ensuring a successful build.
 
-### Jenkins
+### Workflow Setup
 
-Jenkins was chosen as our primary CI/CD automation server due to its versatility and extensive plugin ecosystem. Its ability to support complex workflows and integrations with various tools makes it a suitable choice for our project. Jenkins provides features for scheduling builds, monitoring execution, and facilitating notifications, contributing to streamlined development workflows. However, configuring and maintaining Jenkins instances require significant administrative overhead.
+#### GitHub Actions Workflow File:
 
-### GitHub Actions
+We've set up a GitHub Actions workflow named `build.yml` in the `.github/workflows` directory of our repository.
 
-We also utilize GitHub Actions for our CI/CD pipeline, leveraging its seamless integration with our code repository hosted on GitHub. GitHub Actions offers a straightforward YAML-based configuration for defining workflows, making it easy to automate build, test, and deployment processes directly within our code repository. Its native integration with GitHub simplifies setup and ensures tight collaboration between development and deployment workflows. However, GitHub Actions might have limitations in handling complex workflows compared to dedicated CI/CD platforms like Jenkins.
+#### Workflow Steps:
 
-## Automation Process
+1. **Clone Repository**: The workflow starts by cloning the repository containing the source code of our Flutter web application.
 
-### Build Phase
+2. **Dependency Verification**:
+   - We check if the runner environment has the necessary Flutter dependencies installed.
+   - Additionally, we ensure that the required Flutter application dependencies are present. If not, we provide instructions on how to install them.
 
-1. **Code Compilation**: Upon triggering a new commit or pull request, the pipeline initiates a build process, compiling source code using build tools such as Maven or Gradle.
-2. **Unit Testing**: Following compilation, unit tests are executed to verify the functionality of individual components. Test results are reported back to the developers for immediate feedback.
-3. **Static Code Analysis**: We integrate static code analysis tools like SonarQube to identify potential code quality issues and ensure adherence to coding standards.
+3. **Test Execution**:
+   - The workflow runs any available Flutter tests present in the repository.
+   - It reports the test results, providing developers with immediate feedback.
 
-### Deployment Phase
+4. **Build Flutter Application**:
+   - Using appropriate commands, the workflow builds the Flutter web application.
+   - It ensures that the build process completes successfully without errors.
 
-1. **Integration Testing**: After successful completion of unit tests, the application is deployed to a staging environment where integration tests are performed. These tests validate the interaction between various components and services.
-2. **Deployment to Production**: Upon passing integration tests, the application is automatically deployed to the production environment. We utilize blue-green deployment strategies to minimize downtime and mitigate risks associated with new releases.
-3. **Monitoring and Rollback**: Continuous monitoring of production systems is essential. In case of any issues or abnormalities detected post-deployment, automated rollback mechanisms are in place to revert to the previous stable version.
+#### Environment Variables:
+
+We've set up necessary environment variables such as the Flutter SDK path in our workflow to facilitate the build process.
+
+## Deployment Stage
+
+### Workflow Overview
+
+For the deployment stage, we aim to automatically deploy our Flutter web application to a hosting environment using GitHub Actions.
+
+### Selection Considerations
+
+#### GitHub Pages Deployment:
+
+- GitHub Pages offers straightforward setup and free hosting for static websites.
+- It's ideal for showcasing our application and sharing previews with stakeholders.
+- We need to configure the necessary settings to publish our app at a specific URL, such as `https://<username>.github.io/<repository>`.
+
+#### Google Firebase Deployment:
+
+- Firebase Hosting integrates seamlessly with other Firebase services, providing a robust hosting solution.
+- It offers automatic SSL, fast load times, and built-in security features.
+- Firebase is a suitable choice for a more scalable environment and additional features.
+
+### Workflow Setup
+
+## Deployment Stage
+
+### Workflow Overview
+
+For the deployment stage, we aim to automatically deploy our Flutter web application to a hosting environment using GitHub Actions.
+
+### Selection Considerations
+
+#### GitHub Pages Deployment:
+
+GitHub Pages offers a straightforward and convenient solution for hosting static websites, making it an excellent choice for deploying our Flutter web application. Some key considerations for selecting GitHub Pages include:
+
+- **Ease of Setup**: GitHub Pages integrates seamlessly with GitHub repositories, simplifying the deployment process. By configuring the repository settings and specifying the `gh-pages` branch or `docs` folder, we can publish our application with minimal setup.
+
+- **Free Hosting**: GitHub Pages provides free hosting for static websites, making it a cost-effective option for projects with budget constraints. This allows us to showcase our application without incurring additional hosting expenses.
+
+- **Custom Domain Support**: GitHub Pages supports custom domains, enabling us to use our own domain name for the deployed application. This enhances brand identity and provides a professional appearance for our web application.
+
+### Workflow Setup: GitHub Pages Deployment
+
+#### Workflow Configuration:
+
+We've set up a deployment workflow named `deploy.yml` specifically tailored for deploying our Flutter web application to GitHub Pages.
+
+#### Deployment Steps:
+
+1. **Build Artifact Creation**: Before deployment, we ensure that the Flutter web application is built successfully. This step involves compiling source code, resolving dependencies, and generating the necessary build artifacts.
+
+2. **Deployment Setup**:
+   - We configure the deployment workflow to deploy the built application to GitHub Pages.
+   - This involves specifying the target branch (`gh-pages`) or folder (`docs`) where the deployment artifacts will be published.
+
+3. **Deployment Execution**:
+   - The workflow automatically triggers deployment upon successful completion of the build stage.
+   - It copies the built application files to the designated branch or folder, making the application accessible via the GitHub Pages URL.
+
+4. **Domain Configuration**:
+   - If applicable, we configure the GitHub Pages settings to use a custom domain for our deployed application. This involves updating DNS records and verifying domain ownership.
+
+### Challenges and Solutions:
+
+Setting up GitHub Pages deployment encountered few challenges, primarily related to configuring custom domains and ensuring smooth workflow execution. To address these challenges, we:
+
+- **Secured GitHub Token**: To enable the deployment workflow to access the repository and publish changes to GitHub Pages, we securely managed the GitHub token using GitHub Secrets. This ensured that sensitive credentials are protected and not exposed in the workflow file.
+
+- **Domain Configuration**: Configuring custom domains required updating DNS records and configuring GitHub Pages settings. We carefully followed the documentation provided by GitHub and domain registrar to ensure proper configuration and seamless domain mapping.
+
+### Submission Guidelines
+
+We've included the links to our repository containing the deployment workflow file (`deploy.yml`) along with relevant documentation explaining our approach, including any challenges encountered during the GitHub Pages deployment setup.
+
+
+
+
+
