@@ -44,7 +44,7 @@ For the deployment stage, we aim to automatically deploy our Flutter web applica
 
 #### GitHub Pages Deployment:
 
-GitHub Pages offers a straightforward and convenient solution for hosting static websites, making it an excellent choice for deploying our Flutter web application. Some key considerations for selecting GitHub Pages include:
+GitHub Pages offers a straightforward solution for hosting static websites, making it an excellent choice for deploying our Flutter web application. Some key considerations for selecting GitHub Pages include:
 
 - **Ease of Setup**: GitHub Pages integrates seamlessly with GitHub repositories, simplifying the deployment process. By configuring the repository settings and specifying the `gh-pages` branch or `docs` folder, we can publish our application with minimal setup.
 
@@ -75,8 +75,8 @@ We've set up a deployment workflow named `deploy.yml` specifically tailored for 
 
 ### Challenges and Solutions:
 
-Setting up GitHub Pages deployment encountered few challenges, primarily related to configuring custom domains and ensuring smooth workflow execution. To address these challenges, we:
+Setting up GitHub Pages deployment encountered few challenges, primarily related to getting our proeper github token and custom domains and ensuring smooth workflow execution. To address these challenges, we:
 
-- **Secured GitHub Token**: To enable the deployment workflow to access the repository and publish changes to GitHub Pages, we securely managed the GitHub token using GitHub Secrets. This ensured that sensitive credentials are protected and not exposed in the workflow file.
+- **Secured GitHub Token**: To enable the deployment workflow to access the repository and publish changes to GitHub Pages, we securely managed the GitHub token using GitHub Secrets, I made my own secret using my Github account. This ensured that sensitive credentials are protected and not exposed in the workflow file.
 
 - **Domain Configuration**: Configuring custom domains required updating DNS records and configuring GitHub Pages settings. We carefully followed the documentation provided by GitHub and domain registrar to ensure proper configuration and seamless domain mapping.
