@@ -4,7 +4,7 @@
 
 Our CI/CD pipeline operates on a cloud-based infrastructure utilizing GitHub Actions for automation. With Linux as the operating system, it ensures compatibility with our Flutter web application stack. Leveraging Docker containers ensures consistent builds across environments. GitHub Actions dynamically allocates resources, providing scalability, while encryption and access controls ensure security. 
 
-#### CI/CD Pipeline Tools:
+### CI/CD Pipeline Tools:
 
 We've set up a GitHub Actions workflow named `build.yml` in the `.github/workflows` directory of our repository.
 
