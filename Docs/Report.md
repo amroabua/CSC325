@@ -20,9 +20,9 @@ The CI/CD pipeline is set up using a combination of local and cloud-based enviro
 
 GitHub Actions is selected as the CI/CD tool for this project due to its seamless integration with GitHub repositories and its powerful workflow customization capabilities. GitHub Actions are configured to trigger on specific events, such as code pushes or pull requests, and execute predefined workflows for building, testing, and deploying the Flutter web application.
 
-## Deployment Environment: Firebase Hosting
+## Deployment Environment: GitHub Pages
 
-Firebase Hosting is chosen as the deployment environment for the Flutter web application. Firebase Hosting provides a secure and scalable platform for hosting web applications, with features such as SSL encryption, CDN integration, and automatic scaling based on demand. Setup configurations include configuring Firebase Hosting to serve the Flutter web application and setting up custom domains for production deployment.
+GitHub Pages is chosen as the deployment environment for the Flutter web application. GitHub Pages provides a simple and straightforward way to host static websites directly from GitHub repositories. It offers free hosting with a custom domain support, making it an ideal choice for hosting Flutter web applications. Setup configurations include configuring GitHub Pages to serve the Flutter web application and setting up custom domains for production deployment.
 
 ## Flutter Web Application: Development Overview
 
