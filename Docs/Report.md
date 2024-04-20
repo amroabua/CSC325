@@ -12,6 +12,19 @@ For Flutter development, we have configured a Docker container environment to en
 
 Git is used as the version control system for managing the source code of the Flutter web application. Git allows for efficient collaboration among team members, tracks changes to the codebase, and enables easy rollback to previous versions if needed. The source code is hosted on a remote repository (e.g., GitHub, GitLab) to facilitate code sharing and version control.
 
+Common Commands and Usage
+git clone <repository-url>: Clone the repository to your local machine.
+git add .: Stage all changes for commit.
+git commit -m "Your commit message here": Commit staged changes with a descriptive message.
+git pull origin main: Pull the latest changes from the remote repository.
+git push origin main: Push local commits to the remote repository.
+
+#### Git facilitates collaboration through features such as:
+
+Pull Requests: Propose and review changes before merging them into the main branch.
+Code Reviews: Discuss and provide feedback on code changes within pull requests.
+Conflict Resolution: Resolve conflicts that arise when merging branches with overlapping changes.
+
 ## CI/CD Pipeline Environment: Setup Description
 
 The CI/CD pipeline is set up using a combination of local and cloud-based environments. We utilize cloud services such as GitHub Actions or GitLab CI/CD to automate the build, test, and deployment processes. Additionally, local development environments are used for testing changes before merging them into the main codebase.
@@ -38,6 +51,9 @@ GitHub Pages is chosen as the deployment environment for the Flutter web applica
 ## Flutter Web Application: Development Overview
 
 The Flutter web application developed is a responsive and interactive platform for [describe functionality here]. It incorporates [mention any specific features or functionalities]. The application is thoroughly tested using [mention testing frameworks or methodologies]. Deployment via the CI/CD pipeline ensures that changes are deployed to production environments seamlessly and without manual intervention.
+
+![Alt text]([https://example.com/image.png](https://media.discordapp.net/attachments/797178691163652117/1231381394282905711/Screenshot_2024-04-20_at_7.09.55_PM.png?ex=6636c04a&is=66244b4a&hm=aa2b002106a59382209ad1cd3c882e002c418a1b664697188c895c422bb8711b&=&format=webp&quality=lossless&width=1100&height=688))
+
 
 ## Challenges and Reflections
 
