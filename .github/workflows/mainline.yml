@@ -1,0 +1,56 @@
+name: Main Pipeline
+
+on:
+  push:
+  pull_request:
+    types:
+      - opened
+      - closed
+    branches:
+      - main
+
+jobs:
+  # Continuous Integration (CI) Job
+  CI:
+    name: Flutter Continuous Integration
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+      - name: Install App Dependencies
+        run: flutter pub get
+      - name: Set up lcov
+        run: |
+          sudo apt-get update -qq -y
+          sudo apt-get install lcov -y
+      - name: Run Tests
+        run: flutter test --coverage
+      - name: Report Code Coverage
+        uses: fjlopezs/lcov-reporter-action@v1.0.0
+        with:
+          lcov-file: ./app/coverage/lcov.info
+
+  # Deployment (CD) Job
+  Deploy:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+      - name: Build Flutter Web
+        run: flutter build web
+      - name: Web Deploy - GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_PAGES_TOKEN }}
+          publish_dir: ./app/build/web/
