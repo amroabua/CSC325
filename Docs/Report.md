@@ -52,7 +52,7 @@ GitHub Pages is chosen as the deployment environment for the Flutter web applica
 
 The Flutter web application developed is a responsive and interactive platform for [describe functionality here]. It incorporates [mention any specific features or functionalities]. The application is thoroughly tested using [mention testing frameworks or methodologies]. Deployment via the CI/CD pipeline ensures that changes are deployed to production environments seamlessly and without manual intervention.
 
-![Alt text]([https://example.com/image.png](https://media.discordapp.net/attachments/797178691163652117/1231381394282905711/Screenshot_2024-04-20_at_7.09.55_PM.png?ex=6636c04a&is=66244b4a&hm=aa2b002106a59382209ad1cd3c882e002c418a1b664697188c895c422bb8711b&=&format=webp&quality=lossless&width=1100&height=688))
+![Alt text]([https://example.com/image.png](https://media.discordapp.net/attachments/797178691163652117/1231381394282905711/Screenshot_2024-04-20_at_7.09.55_PM.png?ex=6636c04a&is=66244b4a&hm=aa2b002106a59382209ad1cd3c882e002c418a1b664697188c895c422bb8711b&=&format=webp&quality=lossless&width=1100&height=688)
 
 
 ## Challenges and Reflections
