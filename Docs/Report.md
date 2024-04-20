@@ -50,9 +50,33 @@ GitHub Pages is chosen as the deployment environment for the Flutter web applica
 
 ## Flutter Web Application: Development Overview
 
-The Flutter web application developed is a responsive and interactive platform for [describe functionality here]. It incorporates [mention any specific features or functionalities]. The application is thoroughly tested using [mention testing frameworks or methodologies]. Deployment via the CI/CD pipeline ensures that changes are deployed to production environments seamlessly and without manual intervention.
+Docker: Install Docker
+Git: Install Git
+Flutter: Install Flutter
+Each of these tools are used for devloping Flutter web applications
 
-![Alt text]([https://example.com/image.png](https://media.discordapp.net/attachments/797178691163652117/1231381394282905711/Screenshot_2024-04-20_at_7.09.55_PM.png?ex=6636c04a&is=66244b4a&hm=aa2b002106a59382209ad1cd3c882e002c418a1b664697188c895c422bb8711b&=&format=webp&quality=lossless&width=1100&height=688)
+Docker is a platform for developing and running applications in containers. It provides a platform to allow the deployment of applications inside containers.
+
+GitHub is a platform that provides hosting for software development and version control using Git. Git is a version control system that allows multiple developers to work on a project.
+
+Flutter is a platform that allows you to build applications for various platforms, including mobile, web, and desktop, using a single codebase. For this project we are using a web application.
+
+We have set up a Github repository containing our flutter project then we designed our dev container by setting up an ubuntu container in our codespace.
+
+In this codespace we set up our flutter application in our container.
+
+To run commands after the container is created. I edited the "postCreateCommand": "sudo chown -R vscode /flutter/.pub-cache/" to allow us to use our flutter commands and run our application.
+
+Right now our application contains builds for android, ios, macos, web, windows and linux for now we will focus on web applications
+
+To run our contsinerized development enviroment we go into our application using 'cd app' Then we run our 'flutter run -d web-server' to run our application on our web server. A link would appear in our bash terminal displaying our application.
+
+At this point in our project we have a clicker web application which is the base Flutter app we have containerized.
+
+![Running the original Flutter Web app in my codespace]([https://example.com/image.png](https://media.discordapp.net/attachments/797178691163652117/1231381394282905711/Screenshot_2024-04-20_at_7.09.55_PM.png?ex=6636c04a&is=66244b4a&hm=aa2b002106a59382209ad1cd3c882e002c418a1b664697188c895c422bb8711b&=&format=webp&quality=lossless&width=1100&height=688)
+
+![Flutter Demo]([https://example.com/image.png](https://media.discordapp.net/attachments/797178691163652117/1231381348246093864/Screenshot_2024-04-20_at_7.09.34_PM.png?ex=6636c03f&is=66244b3f&hm=ac92acce9d38470bcebc52e4e0cd70204264c98da8faccc2cf0e7b471dea55c4&=&format=webp&quality=lossless&width=1620&height=1012))
+
 
 
 ## Challenges and Reflections
