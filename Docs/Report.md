@@ -20,6 +20,17 @@ The CI/CD pipeline is set up using a combination of local and cloud-based enviro
 
 GitHub Actions is selected as the CI/CD tool for this project due to its seamless integration with GitHub repositories and its powerful workflow customization capabilities. GitHub Actions are configured to trigger on specific events, such as code pushes or pull requests, and execute predefined workflows for building, testing, and deploying the Flutter web application.
 
+## Build Phase
+The build phase automates compiling the Flutter web application code, verifying dependencies, and executing tests to ensure code integrity and functionality.
+
+### Workflow Overview
+The build.yml workflow file is in the `.github/workflows` directory. Key steps include:
+- Cloning the repository.
+- Verifying dependencies.
+- Running unit tests to validate the functionality of individual components.
+- (Optional) Integration tests to validate component interactions.
+- Compiling the Flutter web application code to generate build artifacts.
+
 ## Deployment Environment: GitHub Pages
 
 GitHub Pages is chosen as the deployment environment for the Flutter web application. GitHub Pages provides a simple and straightforward way to host static websites directly from GitHub repositories. It offers free hosting with a custom domain support, making it an ideal choice for hosting Flutter web applications. Setup configurations include configuring GitHub Pages to serve the Flutter web application and setting up custom domains for production deployment.
