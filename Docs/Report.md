@@ -82,8 +82,9 @@ At this point in our project we have a clicker web application which is the base
 
 Throughout the project, several challenges were encountered, including [mention specific challenges]. However, these challenges were overcome through collaboration and problem-solving within the team. Lessons learned from this project include [mention lessons learned]. Moving forward, potential improvements for the pipeline or application include [mention potential improvements].
 
-![Error Message I Got]([https://example.com/image.png](https://cdn.discordapp.com/attachments/797178691163652117/1231391528023494706/Screenshot_2024-04-20_at_7.50.12_PM.png?ex=6636c9ba&is=662454ba&hm=5f8c4b6a1780335cdd7d92a87e07749fdc78bfca5127e1ff73db269f1a407651&))
+![Error Message I Got](<img width="1440" alt="Screenshot 2024-04-19 at 6 16 29 PM" src="https://github.com/amroabua/CSC325/assets/136997766/afc288c8-7129-4450-999b-688bd25177b4">)
 
 ## Conclusion
+
 
 In conclusion, the implementation of a CI/CD pipeline for Flutter web application development has significantly improved the efficiency and reliability of the software delivery process. Leveraging Docker containers, Git version control, GitHub Actions, Firebase Hosting, and other tools has enabled seamless automation of build, test, and deployment processes. Reflecting on the project, valuable lessons have been learned, and there is room for continuous improvement in both the pipeline and the application itself.
