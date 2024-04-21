@@ -87,6 +87,5 @@ Throughout the project, several challenges were encountered, mainly the one I re
 ![Error Message I Got](Screenshot_2024-04-20_at_7.50.12_PM.png)
 
 ## Conclusion
-Screenshot_2024-04-20_at_7.50.12_PM
 
 In conclusion, the implementation of a CI/CD pipeline for Flutter web application development has significantly improved the efficiency and reliability of the software delivery process. Leveraging Docker containers, Git version control, GitHub Actions, Firebase Hosting, and other tools has enabled seamless automation of build, test, and deployment processes. Reflecting on the project, valuable lessons have been learned, and there is room for continuous improvement in both the pipeline and the application itself.
