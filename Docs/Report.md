@@ -80,9 +80,9 @@ At this point in our project we have a clicker web application which is the base
 
 ## Challenges and Reflections
 
-Throughout the project, several challenges were encountered, including [mention specific challenges]. However, these challenges were overcome through collaboration and problem-solving within the team. Lessons learned from this project include [mention lessons learned]. Moving forward, potential improvements for the pipeline or application include [mention potential improvements].
+Throughout the project, several challenges were encountered, mainly the one I recieved at near the end of the project in which whenever I would deploy my flutter web application and head to my website at https://amroabua.github.io/CSC325/ I would recieve the error message shown:
 
-![Error Message I Got](Screenshot_2024-04-20_at_7.50.12_PM)
+![Error Message I Got](Screenshot_2024-04-20_at_7.50.12_PM.png)
 
 ## Conclusion
 Screenshot_2024-04-20_at_7.50.12_PM
