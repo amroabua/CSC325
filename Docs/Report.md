@@ -78,10 +78,11 @@ At this point in our project we have a clicker web application which is the base
 ![Flutter Demo]([https://example.com/image.png](https://media.discordapp.net/attachments/797178691163652117/1231381348246093864/Screenshot_2024-04-20_at_7.09.34_PM.png?ex=6636c03f&is=66244b3f&hm=ac92acce9d38470bcebc52e4e0cd70204264c98da8faccc2cf0e7b471dea55c4&=&format=webp&quality=lossless&width=1620&height=1012))
 
 
-
 ## Challenges and Reflections
 
 Throughout the project, several challenges were encountered, including [mention specific challenges]. However, these challenges were overcome through collaboration and problem-solving within the team. Lessons learned from this project include [mention lessons learned]. Moving forward, potential improvements for the pipeline or application include [mention potential improvements].
+
+![Error Message I Got]([https://example.com/image.png](https://cdn.discordapp.com/attachments/797178691163652117/1231391528023494706/Screenshot_2024-04-20_at_7.50.12_PM.png?ex=6636c9ba&is=662454ba&hm=5f8c4b6a1780335cdd7d92a87e07749fdc78bfca5127e1ff73db269f1a407651&))
 
 ## Conclusion
 
