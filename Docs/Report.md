@@ -19,6 +19,8 @@ git commit -m "Your commit message here": Commit staged changes with a descripti
 git pull origin main: Pull the latest changes from the remote repository.
 git push origin main: Push local commits to the remote repository.
 
+The adoption of Git as our version control system has greatly enhanced our development workflow. It has provided us with a robust framework for managing code changes, collaborating effectively, and ensuring the integrity of our project. Moving forward, we will continue to leverage Git's capabilities to streamline our development process and deliver high-quality software.
+
 #### Git facilitates collaboration through features such as:
 
 Pull Requests: Propose and review changes before merging them into the main branch.
@@ -73,7 +75,7 @@ To run our contsinerized development enviroment we go into our application using
 
 At this point in our project we have a clicker web application which is the base Flutter app we have containerized.
 
-![Running the original Flutter Web app in my codespace]([https://example.com/image.png](https://media.discordapp.net/attachments/797178691163652117/1231381394282905711/Screenshot_2024-04-20_at_7.09.55_PM.png?ex=6636c04a&is=66244b4a&hm=aa2b002106a59382209ad1cd3c882e002c418a1b664697188c895c422bb8711b&=&format=webp&quality=lossless&width=1100&height=688))
+![Running the original Flutter Web app in my codespace](Screenshot_2024-04-20_at_7.09.55_PM.png)
 
 ![Flutter Demo]([https://example.com/image.png](https://media.discordapp.net/attachments/797178691163652117/1231381348246093864/Screenshot_2024-04-20_at_7.09.34_PM.png?ex=6636c03f&is=66244b3f&hm=ac92acce9d38470bcebc52e4e0cd70204264c98da8faccc2cf0e7b471dea55c4&=&format=webp&quality=lossless&width=1620&height=1012))
 
