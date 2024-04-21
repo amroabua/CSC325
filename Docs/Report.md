@@ -82,7 +82,7 @@ At this point in our project we have a clicker web application which is the base
 
 Throughout the project, several challenges were encountered, including [mention specific challenges]. However, these challenges were overcome through collaboration and problem-solving within the team. Lessons learned from this project include [mention lessons learned]. Moving forward, potential improvements for the pipeline or application include [mention potential improvements].
 
-![Error Message I Got]([<img width="1440" alt="Screenshot 2024-04-19 at 6 16 29 PM" src="https://github.com/amroabua/CSC325/assets/136997766/afc288c8-7129-4450-999b-688bd25177b4">](https://media.discordapp.net/attachments/797178691163652117/1231381394282905711/Screenshot_2024-04-20_at_7.09.55_PM.png?ex=6636c04a&is=66244b4a&hm=aa2b002106a59382209ad1cd3c882e002c418a1b664697188c895c422bb8711b&=&format=webp&quality=lossless&width=1620&height=1012))
+![Error Message I Got](<img width="1440" alt="Screenshot_2024-04-20_at_7 50 12_PM" src="https://github.com/amroabua/CSC325/assets/136997766/e74c03f4-b7d9-454b-8901-58838afe1162">)
 
 ## Conclusion
 
