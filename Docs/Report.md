@@ -75,17 +75,19 @@ To run our contsinerized development enviroment we go into our application using
 
 At this point in our project we have a clicker web application which is the base Flutter app we have containerized.
 
-![Running the original Flutter Web app in my codespace](Screenshot_2024-04-20_at_7.09.55_PM.png)
+Running the original Flutter Web app in my codespace:
 
-![Flutter Demo]([https://example.com/image.png](https://media.discordapp.net/attachments/797178691163652117/1231381348246093864/Screenshot_2024-04-20_at_7.09.34_PM.png?ex=6636c03f&is=66244b3f&hm=ac92acce9d38470bcebc52e4e0cd70204264c98da8faccc2cf0e7b471dea55c4&=&format=webp&quality=lossless&width=1620&height=1012))
 <img width="1440" alt="Screenshot_2024-04-20_at_7 09 55_PM" src="https://github.com/amroabua/CSC325/assets/136997766/370531f4-fc17-4284-87a1-d8f1e76e5659">
+
+Demo:
+<img width="1440" alt="Screenshot 2024-04-20 at 7 09 34 PM" src="https://github.com/amroabua/CSC325/assets/136997766/f1d27e0b-f753-4a46-86e2-4a849b1f564b">
+
 
 
 ## Challenges and Reflections
 
 Throughout the project, several challenges were encountered, mainly the one I recieved at near the end of the project in which whenever I would deploy my flutter web application and head to my website at https://amroabua.github.io/CSC325/ I would recieve the error message shown:
-
-![Error Message I Got](Screenshot_2024-04-20_at_7.50.12_PM.png)
+<img width="1440" alt="Screenshot_2024-04-20_at_7 50 12_PM" src="https://github.com/amroabua/CSC325/assets/136997766/192036e1-7e69-4cc9-9158-685f474aff47">
 
 ## Conclusion
 
