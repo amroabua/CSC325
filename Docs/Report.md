@@ -78,6 +78,7 @@ At this point in our project we have a clicker web application which is the base
 ![Running the original Flutter Web app in my codespace](Screenshot_2024-04-20_at_7.09.55_PM.png)
 
 ![Flutter Demo]([https://example.com/image.png](https://media.discordapp.net/attachments/797178691163652117/1231381348246093864/Screenshot_2024-04-20_at_7.09.34_PM.png?ex=6636c03f&is=66244b3f&hm=ac92acce9d38470bcebc52e4e0cd70204264c98da8faccc2cf0e7b471dea55c4&=&format=webp&quality=lossless&width=1620&height=1012))
+<img width="1440" alt="Screenshot_2024-04-20_at_7 09 55_PM" src="https://github.com/amroabua/CSC325/assets/136997766/370531f4-fc17-4284-87a1-d8f1e76e5659">
 
 
 ## Challenges and Reflections
