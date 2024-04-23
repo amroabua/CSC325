@@ -30,15 +30,6 @@ jobs:
         run: flutter build web
         working-directory: ./app
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    if: success()
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:  
