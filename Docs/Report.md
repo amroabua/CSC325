@@ -2,13 +2,15 @@
 
 ## Introduction: Overview of CI/CD Pipelines
 
-Continuous Integration (CI) and Continuous Deployment (CD) pipelines are essential components of modern software development workflows. These pipelines automate the process of integrating code changes, testing them, and deploying them to production environments. CI/CD pipelines ensure faster and more reliable delivery of software, enabling teams to iterate quickly and respond to user feedback efficiently.
+Continuous Integration (CI) and Continuous Deployment (CD) pipelines are essential components of modern software development workflows. CI checks code regularly to ensure it works well with other pieces and CD automatically sends finished code to where it needs to be. These pipelines automate the process of integrating code changes, testing them, and deploying them to production environments. CI/CD pipelines ensure faster and more reliable delivery of software, enabling teams to iterate quickly and respond to user feedback efficiently.
 
 ## DevContainer Environment: Docker Configuration for Flutter Development
 
-For Flutter development, we have configured a Docker container environment to ensure consistency across different development machines and to streamline the setup process for new team members. The Docker container includes all necessary dependencies and tools required for Flutter development, such as the Flutter SDK, Android SDK, and any additional libraries or packages.
+A DevContainer is like a ready-to-use workspace for developers. It has all the tools and settings you need, so you can start coding without setting things up yourself. For the sake of this project we uses ubuntu which is a operating system that has all the tools needed for Flutter development. The container includes all necessary dependencies and tools required for Flutter development, such as the Flutter SDK, Android SDK, and any additional libraries or packages.
 
 ## Source Code Version Control Tools: Git Version Control
+
+Version control keeps track of all the changes made to a project over time. If something goes wrong, you can go back to a previous version to fix it. It also allows multiple people work on the same project without overwriting each other's work. This helps teams collaborate and keeps code organized.
 
 Git is used as the version control system for managing the source code of the Flutter web application. Git allows for efficient collaboration among team members, tracks changes to the codebase, and enables easy rollback to previous versions if needed. The source code is hosted on a remote repository (e.g., GitHub, GitLab) to facilitate code sharing and version control.
 
@@ -18,14 +20,11 @@ git add .: Stage all changes for commit.
 git commit -m "Your commit message here": Commit staged changes with a descriptive message.
 git pull origin main: Pull the latest changes from the remote repository.
 git push origin main: Push local commits to the remote repository.
+Pull Requests: Facilitate code reviews and change proposals.
 
-The adoption of Git as our version control system has greatly enhanced our development workflow. It has provided us with a robust framework for managing code changes, collaborating effectively, and ensuring the integrity of our project. Moving forward, we will continue to leverage Git's capabilities to streamline our development process and deliver high-quality software.
+If a team used this as their version control then developers can clone the repository, make changes, and push them back to the remote repository. Regular pulls ensure local versions are up-to-date with the remote repository.
 
-#### Git facilitates collaboration through features such as:
-
-Pull Requests: Propose and review changes before merging them into the main branch.
-Code Reviews: Discuss and provide feedback on code changes within pull requests.
-Conflict Resolution: Resolve conflicts that arise when merging branches with overlapping changes.
+The adoption of Git as the version control system has greatly enhanced the development workflow. It has provided me with a robust framework for managing code changes and ensuring the integrity of the project. 
 
 ## CI/CD Pipeline Environment: Setup Description
 
@@ -34,6 +33,9 @@ The CI/CD pipeline is set up using a combination of local and cloud-based enviro
 ## CI/CD Tools: GitHub Actions
 
 GitHub Actions is selected as the CI/CD tool for this project due to its seamless integration with GitHub repositories and its powerful workflow customization capabilities. GitHub Actions are configured to trigger on specific events, such as code pushes or pull requests, and execute predefined workflows for building, testing, and deploying the Flutter web application.
+
+Build phase: Cloning the repository, verifying dependencies, running tests, and compiling the code.
+Deployment phase: Deploying to GitHub Pages for hosting.
 
 ## Build Phase
 The build phase automates compiling the Flutter web application code, verifying dependencies, and executing tests to ensure code integrity and functionality.
@@ -49,6 +51,22 @@ The build.yml workflow file is in the `.github/workflows` directory. Key steps i
 ## Deployment Environment: GitHub Pages
 
 GitHub Pages is chosen as the deployment environment for the Flutter web application. GitHub Pages provides a simple and straightforward way to host static websites directly from GitHub repositories. It offers free hosting with a custom domain support, making it an ideal choice for hosting Flutter web applications. Setup configurations include configuring GitHub Pages to serve the Flutter web application and setting up custom domains for production deployment.
+
+We are able to deploy due to having our ac
+
+ - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:  
+          github_token: ${{ secrets.GH_PAGES_TOKEN }}
+          publish_dir: ./app/build/web
+   
+A secret token is a secure, private value used to authenticate and authorize actions in a CI/CD pipeline. It is typically stored in a way that only authorized jobs can access it. In GitHub Actions, secrets are stored in the repository or organization settings and can be accessed securely within the workflow.
+
+In GitHub Actions, you don't want to share your password with everyone. So, GitHub lets you keep it hidden in a "secret" section. This way, when your workflow needs to deploy, it can use the secret token without exposing it to anyone who shouldn't see it.
+
+This token is important because it gives your workflow permission to upload your project to GitHub Pages. Without it, the workflow doesn't have the authority to deploy, and you'd get an error.
+
+Using secrets keeps your pipeline safe and ensures that only authorized people can make changes to your project. It’s like a security guard for your deployment process.
 
 ## Flutter Web Application: Development Overview
 
@@ -88,6 +106,11 @@ Demo:
 
 Throughout the project, several challenges were encountered, mainly the one I recieved at near the end of the project in which whenever I would deploy my flutter web application and head to my website at https://amroabua.github.io/CSC325/ I would recieve the error message shown:
 <img width="1440" alt="Screenshot_2024-04-20_at_7 50 12_PM" src="https://github.com/amroabua/CSC325/assets/136997766/192036e1-7e69-4cc9-9158-685f474aff47">
+
+To fix this I worked with Mr. Munday only to find my mainline.yml file had the issue of having two jobs. And the reason this caused the issue was due to the fact that in most CI/CD systems, jobs are isolated from each other. This means they don't share files, data, or environment variables. If the build job creates a build then the deploy job won't have access to those variables unless you explicitly set up a way to share them. Which is the problem I ran into, so to fix this I updated my mainline.yml to run with one job to build and deploy my app.
+
+<img width="1440" alt="Screenshot 2024-04-23 at 10 25 10 PM" src="https://github.com/amroabua/CSC325/assets/136997766/ca368006-29a8-4b54-ba9a-94fd9e3aaba4">
+
 
 ## Conclusion
 
