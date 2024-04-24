@@ -6,7 +6,24 @@ Continuous Integration (CI) and Continuous Deployment (CD) pipelines are essenti
 
 ## DevContainer Environment: Docker Configuration for Flutter Development
 
-A DevContainer is like a ready-to-use workspace for developers. It has all the tools and settings you need, so you can start coding without setting things up yourself. For the sake of this project we uses ubuntu which is a operating system that has all the tools needed for Flutter development. The container includes all necessary dependencies and tools required for Flutter development, such as the Flutter SDK, Android SDK, and any additional libraries or packages.
+A DevContainer is like a ready-to-use workspace for developers. It has all the tools and settings you need, so you can start coding without setting things up yourself. For my Flutter development environment, I selected a Docker image explicitly designed for Flutter. This image includes the Flutter SDK, Dart and for our Flutter development environment, I selected a Docker image explicitly designed for Flutter. I specifically used Ubuntu for the DevContainer.json with the Jammmy based image.
+
+Our DevContainer seamlessly integrates with Visual Studio Code (VS Code), providing a unified development experience. Some extensions I used were the DevContainers extension that uses a Docker container as a full-featured development environment. I also used Github Repositories and GitHub Codespaces so that I can work wiht my Github codespace from VS code.
+
+For you to run this container on your own the usgae would be the steps that followed:
+
+Clone the Flutter project repository from GitHub.
+
+Open the project folder in Visual Studio Code.
+
+VS Code detects the DevContainer configuration and prompts to reopen the project in a DevContainer. Accept the prompt to start the development environment within the configured Docker container.
+
+Use the integrated terminal in VS Code to execute Flutter commands, such as running the application or running tests. Specifially use: flutter run -d web-server to run your app on the web (make sure you are in the app before you do this)
+
+When Setting up my DevContainer environment I ran into the issue of adding my own container and setting up in my Github Repository. To set up my container I had to apply the DevContainer extension to use Ubuntu and use the post create command: sudo chown -R vscode /flutter/.pub-cache/". After this I learned to commit my chages through command line to github so that I can process my finished container on Github.
+
+Utilizing a DevContainer for our Flutter project offers several advantages. It ensures a consistent and reproducible environment, facilitates collaboration, and streamlines the onboarding process. The insights gained from configuring and using the DevContainer contribute to an efficient and scalable development process.
+
 
 ## Source Code Version Control Tools: Git Version Control
 
@@ -29,6 +46,20 @@ The adoption of Git as the version control system has greatly enhanced the devel
 ## CI/CD Pipeline Environment: Setup Description
 
 The CI/CD pipeline is set up using a combination of local and cloud-based environments. We utilize cloud services such as GitHub Actions or GitLab CI/CD to automate the build, test, and deployment processes. Additionally, local development environments are used for testing changes before merging them into the main codebase.
+
+Each of these tools are used for devloping Flutter web applications
+
+Docker is a platform for developing and running applications in containers. It provides a platform to allow the deployment of applications inside containers.
+
+GitHub is a platform that provides hosting for software development and version control using Git. Git is a version control system that allows multiple developers to work on a project.
+
+Flutter is a platform that allows you to build applications for various platforms, including mobile, web, and desktop, using a single codebase. For this project we are using a web application.
+
+We have set up a Github repository containing our flutter project then we designed our dev container by setting up an ubuntu container in our codespace.
+
+In this codespace we set up our flutter application in our container.
+
+To run commands after the container is created. I edited the "postCreateCommand": "sudo chown -R vscode /flutter/.pub-cache/" to allow us to use our flutter commands and run our application.
 
 ## CI/CD Tools: GitHub Actions
 
