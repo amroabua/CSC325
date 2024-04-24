@@ -105,6 +105,7 @@ Demo:
 ## Challenges and Reflections
 
 Throughout the project, several challenges were encountered, mainly the one I recieved at near the end of the project in which whenever I would deploy my flutter web application and head to my website at https://amroabua.github.io/CSC325/ I would recieve the error message shown:
+
 <img width="1440" alt="Screenshot_2024-04-20_at_7 50 12_PM" src="https://github.com/amroabua/CSC325/assets/136997766/192036e1-7e69-4cc9-9158-685f474aff47">
 
 To fix this I worked with Mr. Munday only to find my mainline.yml file had the issue of having two jobs. And the reason this caused the issue was due to the fact that in most CI/CD systems, jobs are isolated from each other. This means they don't share files, data, or environment variables. If the build job creates a build then the deploy job won't have access to those variables unless you explicitly set up a way to share them. Which is the problem I ran into, so to fix this I updated my mainline.yml to run with one job to build and deploy my app.
