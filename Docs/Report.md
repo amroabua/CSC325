@@ -115,3 +115,5 @@ To fix this I worked with Mr. Munday only to find my mainline.yml file had the i
 ## Conclusion
 
 In conclusion, the implementation of a CI/CD pipeline for Flutter web application development has significantly improved the efficiency and reliability of the software delivery process. Leveraging Docker containers, Git version control, GitHub Actions, Firebase Hosting, and other tools has enabled seamless automation of build, test, and deployment processes. Reflecting on the project, valuable lessons have been learned, and there is room for continuous improvement in both the pipeline and the application itself.
+
+Reflecting on this project, there's room for continuous improvement and innovation, with a commitment to delivering high-quality software products.
