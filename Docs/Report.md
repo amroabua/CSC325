@@ -24,6 +24,20 @@ When Setting up my DevContainer environment I ran into the issue of adding my ow
 
 Utilizing a DevContainer for our Flutter project offers several advantages. It ensures a consistent and reproducible environment, facilitates collaboration, and streamlines the onboarding process. The insights gained from configuring and using the DevContainer contribute to an efficient and scalable development process.
 
+Devcontainer.json: This file specifies the configurations for the VS Code development environment. Key configurations include:
+
+"name": "Ubuntu",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"features": {
+		"ghcr.io/jarrodcolburn/features/flutter-sdk:0": {}
+	},
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "sudo chown -R vscode /flutter/.pub-cache/"
+
+These configurations ensure that developers can  clone the repository and set up the development environment in a Docker container. The setup offers a seamless experience with Visual Studio Code and allows developers to execute Flutter commands within the  terminal.
+
 
 ## Source Code Version Control Tools: Git Version Control
 
